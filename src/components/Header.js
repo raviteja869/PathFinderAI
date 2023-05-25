@@ -1,38 +1,33 @@
-importimportimportimportimportimporimportimportimportimportimportimportimporimportimport React from 'react';
-importimport { Link } from 'react-router-dom';
-imporimporteader.css'; // Import your CSS file
-import logologo fromfrom '../../images/your-user-icon.png'; // Import your logo
-logopori
-function Heaori
-Headero */}
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css'; // Import your CSS file
+import logo from '../images/logo.png'; // Import your logo
+import userIcon from '../images/your-user-icon.png'; // Import your user icon
 
-LdefaHeaderHeaderddHefromLdefaHeaderHeaderddHefrom
-HeL
-Headerd
-o */}
-
-derder() {
+function Header() {
   return (
     <header className="header">
       <img src={logo} alt="PathFinderAI" className="logo" /> {/* Your platform's logo */}
       <input type="search" className="search-bar" placeholder="Search..." /> {/* Search bar */}
       <nav>
         <ul className="nav-links">
-          <li><LdefaHeaderHeaderdderLdefaHeaderHeaderdder">Career Plan</Link></li>
+          <li><Link to="/career-plan">Career Plan</Link></li>
           <li><Link to="/mentor-match">Mentor Match</Link></li>
-    <li><Link to="/goal-tracking">Goal Tracking</Link></li>
+          <li><Link to="/goal-tracking">Goal Tracking</Link></li>
           <li><Link to="/skills-analysis">Skills Analysis</Link></li>
           <li><Link to="/job-application">Job Application</Link></li>
           <li><Link to="/interview-practice">Interview Practice</Link></li>
           <li><Link to="/career-change">Career Change</Link></li>
         </ul>
       </nav>
-      //<imgimgimgimgimgimgimgimg src="../images/your-user-icon.png" alt="User" className="user-icon" /> {/* User profile icon */}
+      <img src={userIcon} alt="User" className="user-icon" /> {/* User profile icon */}
     </header>
   );
 }
 
-export defaHeaderHeaderddefaHeaderHeaderdderder
-Headerader;
-LdefaHeaderHeaderddddLdefaHeaderHeaderddHefromrdddderderLde
-defaHeaderHdefaLdefaHeaderHeaderdddderderLde
+export default Header;
+
+
+
+
+
