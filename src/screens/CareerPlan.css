@@ -1,0 +1,64 @@
+.career-plan {
+  width: 80%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.career-plan h2 {
+  color: #333;
+  font-size: 24px;
+}
+
+.career-plan p {
+  color: #666;
+  font-size: 18px;
+}
+
+.career-plan ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.career-plan li {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.career-plan button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.career-plan button:hover {
+  background-color: #0056b3;
+}
+
+.career-plan form {
+  margin-top: 20px;
+}
+
+.career-plan label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.career-plan input, .career-plan textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
