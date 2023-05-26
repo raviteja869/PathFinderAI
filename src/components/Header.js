@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'; // Import your CSS file
-import logo from '../images/logo.png'; // Import your logo
-import userIcon from '../images/your-user-icon.png'; // Import your user icon
+//import logo from '../images/logo.png'; // Import your logo
+//import userIcon from '../images/your-user-icon.png'; // Import your user icon
 
 function Header() {
   return (
@@ -20,14 +20,9 @@ function Header() {
           <li><Link to="/career-change">Career Change</Link></li>
         </ul>
       </nav>
-      <img src={userIcon} alt="User" className="user-icon" /> {/* User profile icon */}
+      //<img src={userIcon} alt="User" className="user-icon" /> {/* User profile icon */}
     </header>
   );
 }
 
 export default Header;
-
-
-
-
-
