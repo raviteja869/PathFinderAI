@@ -78,9 +78,7 @@ function JobApplication() {
     return <div>Loading...</div>;
   }
 
-Here's the continuation of the enhanced code:
 
-```jsx
   if (error) {
     return <div>Error: {error.message}</div>;
   }
