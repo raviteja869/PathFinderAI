@@ -1,4 +1,4 @@
-importimportimporimportimportimporimportimportimporimportimportimporimportimportimportimport React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import './HandsOnProjects.css';
@@ -98,49 +98,53 @@ function HandsOnProjects() {
   const progressPercentage = (Object.values(progress).filter(Boolean).length / projects.length) * 100;
 
   return (
-    <><div className="hands-on-projects">
+    <div className="hands-on-projects">
       <h2>Your Hands-On Projects</h2>
       <ProgressBar now={progressPercentage} label={`${Math.round(progressPercentage)}%`} />
-      < />```jsx
-      DragDropContext onDragEnd={handleDragEnd}>
-      <Droppable droppableId="droppable">
-        {(provided) => (
-          <ul {...provided.droppableProps} ref={provided.innerRef}>
-            {projects.map((project, index) => (
-              <Draggable key={project.id} draggableId={project.id} index={index}>
-                {(provided) => (
-                  <li
-                    {...provided.draggableProps}
-                    {...provided.dragHandleProps}
-                    ref={provided.innerRef}
-                    className="draggable-item"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={progress[project.id] || false}
-                      onChange={() => handleProgressUpdate(project.id)} />
-                    {project.name}
-                    <p>{project.description}</p>
-                  </li>
-                )}
-              </Draggable>
-            ))}
-            {provided.placeholder}
-          </ul>
-        )}
-      </Droppable>
-    </DragDropContext><ul>
+      <```jsx
+DragDropContext onDragEnd={handleDragEnd}>
+        <Droppable droppableId="droppable">
+          {(provided) => (
+            <ul {...provided.droppableProps} ref={provided.innerRef}>
+              {projects.map((project, index) => (
+                <Draggable key={project.id} draggableId={project.id} index={index}>
+                  {(provided) => (
+                    <li
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
+                      ref={provided.innerRef}
+                      className="draggable-item"
+                    >
+                      <input
+                        type="checkbox"
+                        checked={progress[project.id] || false}
+                        onChange={() => handleProgressUpdate(project.id)}
+                      />
+                      {project.name}
+                      <p>{project.description}</p>
+                    </li>
+                  )}
+                </Draggable>
+              ))}
+              {provided.placeholder}
+            </ul>
+          )}
+        </Droppable>
+      </DragDropContext>
+      <ul>
         {customProjects.map((project, index) => (
           <li key={index}>
             <input
               type="checkbox"
               checked={progress[project] || false}
-              onChange={() => handleProgressUpdate(project)} />
+              onChange={() => handleProgressUpdate(project)}
+            />
             {project}
             <button onClick={() => removeProject(project)}>Remove</button>
           </li>
         ))}
-      </ul><button onClick={() => addProject('New Project')}>Add Project</button></>
+      </ul>
+      <button onClick={() => addProject('New Project')}>Add Project</button>
     </div>
   );
 }
