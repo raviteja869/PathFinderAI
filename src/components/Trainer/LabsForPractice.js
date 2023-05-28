@@ -57,7 +57,7 @@ function LabsForPractice() {
   return (
     <div className="labs-for-practiceSure, here is the continuation of the code:
 
-
+```jsx
     <h2>Your Labs for Practice</h2>
     <div className="lab-content">
       <div className="interactive-pdf">
@@ -84,4 +84,3 @@ function LabsForPractice() {
 }
 
 export default LabsForPractice;
-
